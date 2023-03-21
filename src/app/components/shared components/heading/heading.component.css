@@ -1,0 +1,20 @@
+h1{
+font-weight: bold;
+color:hsl(213, 96%, 18%) ;
+}
+
+p{
+margin-bottom: 0;
+color:hsl(231, 11%, 63%);
+height: 52px;
+}
+
+@media(max-width:390px){
+p{
+font-size: 12px;
+}
+
+h1{
+font-size: 21px !important;
+}
+}

@@ -1,0 +1,258 @@
+
+a{
+text-decoration:none;
+}
+ul{
+list-style: none;
+padding: 0;
+}
+
+h5{
+color:hsl(213, 96%, 18%) ;
+}
+
+p{
+color:hsl(231, 11%, 63%);
+margin-bottom: 0;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 28px;
+margin-inline:20px
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: hsl(213, 96%, 18%);
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 20px;
+width: 20px;
+left: 6px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(29px);
+-ms-transform: translateX(29px);
+transform: translateX(29px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.plans{
+display: flex;
+width: 100%;
+justify-content: space-between;
+margin-bottom: 30px;
+height: 182px
+}
+
+.plan{
+width: calc((100% - 40px) / 3);
+border: 2px solid hsl(229, 24%, 87%);
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.plan:hover{
+border-color: hsl(231, 11%, 63%);
+}
+
+.plan .icon{
+margin-bottom: 50px;
+}
+
+.active{
+border-color: hsl(231, 11%, 63%);
+background-color: hsl(217, 100%, 97%);
+}
+
+.form-check {
+text-align: center;
+padding: 20px;
+background-color: hsl(217, 100%, 97%);
+border-radius: 10px;
+}
+
+.date{
+color:hsl(213, 96%, 18%);
+font-weight: 600;
+}
+
+span{
+color: hsl(213, 96%, 18%);
+font-weight: 600;
+}
+
+.main-content{
+margin-top: 10px;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+@media(max-width:992px){
+.plan .icon{
+  margin-bottom: 30px;
+}
+
+.plan span{
+font-size: 14px;
+}
+
+.plan p{
+font-size: 15px;
+}
+
+h5{
+font-size: 18px;
+}
+}
+
+@media(max-width:786px)
+{
+.plans{
+  flex-direction: column;
+  margin-bottom: 8px;
+  height: 268px;
+}
+
+.plan{
+  padding: 7px;
+  margin-bottom: 15px;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 100%;
+  gap: 40px;
+}
+
+.plan span{
+  font-size: 11px;
+
+}
+.plan h5{
+  font-size: 16px;
+  margin: 0;
+  font-weight: 700;
+
+}
+
+.slider.round {
+  height: 23px;
+  width: 54px;
+}
+
+.slider:before {
+height: 18px;
+width: 18px;
+left: 4px;
+bottom: 3px;
+}
+
+.plan p{
+  font-size: 11px;
+
+}
+
+.plan .icon{
+  margin-bottom: 8px;
+}
+
+.date
+{
+font-size: 12px;
+}
+
+.form-check{
+padding: 10px;
+}
+}
+
+@media(max-width:390px)
+{
+.main-content{
+height: 350px;
+}
+
+img, svg {
+  width: 30px;
+  height: 30px;
+}
+
+.plans{
+  margin-bottom:0;
+}
+
+.plan{
+  padding: 5px 10px;
+  gap: 20px;
+}
+
+.plan h5{
+  font-size: 12px;
+  margin: 0;
+
+}
+
+.plan span{
+  font-size: 10px;
+}
+.plan p{
+  font-size: 11px;
+
+}
+
+.switch{
+margin-inline: 7px;
+width: 46px;
+}
+.slider.round{
+  height: 20px;
+  width: 46px;
+  top: 3px;
+}
+.slider:before {
+  height: 15px;
+  width: 15px;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  }
+}

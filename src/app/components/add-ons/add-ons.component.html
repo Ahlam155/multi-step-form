@@ -1,0 +1,28 @@
+<div class="main" >
+  <app-heading heading="Pick add-ons" paragraph="Add-ons help enhance your gaming experience."></app-heading>
+  <div class="main-content">
+    <div>
+      <ng-container *ngFor="let item of ons ; index as i">
+        <div #ctr class="form-control" >
+            <input #checkBox class="checkbox" type="checkbox" id="myCheckbox1" (click)="check(checkBox,ctr,item)">
+            <label label class="custom-control-label" for="myCheckbox1">
+                <div class="ons-content">
+                  <h5>{{item.name}}</h5>
+                  <p>Access to multiplayer games</p>
+                </div>
+              <ng-container [ngSwitch]="offer">
+                <span *ngSwitchCase="'Monthly'">+${{item.month}}/mo</span>
+                <span *ngSwitchCase="'Yearly'">+${{item.year}}/yr</span>
+              </ng-container>
+            </label>
+        </div>
+      </ng-container>
+
+      <div  *ngIf="checked==0" >
+        <div class="invalid" >Choose one at least</div>
+      </div>
+    </div>
+
+    <app-group-buttons  back="/plan" next="/summary" [navigate]="navigate" content="Next Step"></app-group-buttons>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+p{
+margin-bottom: 0;
+color:hsl(231, 11%, 63%);
+}
+
+.form-control:focus{
+box-shadow:none !important;
+border-color: hsl(213, 96%, 18%);
+}
+
+.form-control{
+padding:30px;
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+gap: 30px;
+height: 86px;
+}
+
+label{
+margin-block:20px 10px;
+color:hsl(213, 96%, 18%);
+}
+
+.checkbox{
+accent-color: hsl(243, 100%, 62%);
+}
+
+input[type=checkbox]
+{
+/* Double-sized Checkboxes */
+-ms-transform: scale(1.5); /* IE */
+-moz-transform: scale(1.5); /* FF */
+-webkit-transform: scale(1.5); /* Safari and Chrome */
+-o-transform: scale(1.5); /* Opera */
+transform: scale(1.5);
+padding: 6px;
+}
+
+.custom-control-label{
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin: 0;
+align-items: center;
+}
+
+h5{
+font-size: 19px;
+margin-bottom: 0;
+color:hsl(213, 96%, 18%) ;
+font-weight: 700;
+}
+
+.ons-content p{
+margin: 3px 0;
+font-size: 14px;
+}
+
+.active{
+border-color: hsl(231, 11%, 63%) !important;
+background-color: hsl(217, 100%, 97%) !important;
+}
+
+.invalid{
+color:hsl(354, 84%, 57%);
+font-weight: 700;
+font-size: 14px;
+}
+
+.custom-control-label span{
+color:hsl(243, 100%, 62%);
+font-size: 17px;
+}
+
+.main-content{
+margin-top:10px;
+height: 400px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+@media(max-width:992px){
+h5{
+font-size: 17px ;
+}
+
+.ons-content p{
+font-size: 13px;
+}
+
+.invalid{
+font-size: 13px;
+}
+
+.custom-control-label span{
+font-size: 15px;
+}
+
+}
+
+@media(max-width:780px){
+h5{
+font-size: 14px ;
+}
+
+.ons p{
+font-size: 9px;
+}
+
+.form-control{
+padding: 12px;
+height: 75px;
+}
+
+.invalid{
+font-size: 12px;
+}
+
+span{
+font-size: 12px;
+}
+
+}
+
+@media(max-width:390px){
+input[type=checkbox]
+{
+/* Double-sized Checkboxes */
+-ms-transform: scale(1); /* IE */
+-moz-transform: scale(1); /* FF */
+-webkit-transform: scale(1); /* Safari and Chrome */
+-o-transform: scale(1); /* Opera */
+transform: scale(1);
+}
+
+.main-content{
+height: 350px;
+}
+
+h5{
+font-size: 12px ;
+}
+
+.ons-content p{
+font-size: 10px;
+max-width: 125px;
+}
+
+.custom-control-label span{
+font-size: 11px;
+}
+
+.form-control{
+padding:10px;
+gap: 15px;
+height: 60px;
+}
+
+.invalid{
+  font-size: 11px;
+}
+
+}
+@media(max-width:316px){
+input[type=checkbox]
+{
+/* Double-sized Checkboxes */
+-ms-transform: scale(1.5); /* IE */
+-moz-transform: scale(1.5); /* FF */
+-webkit-transform: scale(1.5); /* Safari and Chrome */
+-o-transform: scale(1.5); /* Opera */
+transform: scale(1);
+}
+
+h5{
+font-size: 10px ;
+margin-bottom: 3px;
+}
+
+.ons-content p{
+font-size: 8px;
+max-width: 90px;
+
+}
+
+.custom-control-label span{
+font-size:8px;
+}
+
+.invalid{
+font-size: 10px;
+}
+}

@@ -1,0 +1,40 @@
+<div class="main">
+  <app-heading heading="Select your plan" paragraph="You have the option of monthly or yearly billing."></app-heading>
+  <div class="main-content">
+    <div>
+      <ul class="plans" >
+        <ng-container *ngFor="let plan of allPlans ;index as i">
+        <li [ngClass]="clicked === i ? 'active plan' : 'plan'" (click)="select(i,plan)">
+
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
+          </div>
+          <div class="plan-content">
+          <h5>{{plan.name}}</h5>
+
+          <ng-container [ngSwitch]="offer" >
+            <p *ngSwitchCase="'Monthly'">${{plan.month}}/mo</p>
+
+            <div *ngSwitchCase="'Yearly'" class="year" >
+              <p>${{plan.year}}/yr</p>
+              <span>2 months free</span>
+            </div>
+          </ng-container>
+        </div>
+        </li>
+      </ng-container>
+      </ul>
+
+      <div class="form-check">
+        <label class="date">Monthly</label>
+        <label class="switch">
+          <input #swt type="checkbox" checked (click)="switch(swt)">
+          <span class="slider round"></span>
+        </label>
+        <label class="date">Yearly</label>
+      </div>
+    </div>
+
+    <app-group-buttons [end]="false" back="/info" next="/ons" [navigate]="true" content="Next Step"></app-group-buttons>
+    </div>
+</div>

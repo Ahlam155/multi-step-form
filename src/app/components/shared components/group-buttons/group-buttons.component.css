@@ -1,0 +1,67 @@
+.next{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: hsl(213, 96%, 18%);
+border: none;
+width: 140px;
+border-radius: 5px;
+color: hsl(0, 0%, 100%);
+}
+
+.buttons , .nxt{
+display: flex;
+width: 100%;
+height: 50px;
+}
+
+.buttons{
+justify-content: space-between;
+}
+
+.nxt{
+justify-content: flex-end;
+}
+
+.back{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:transparent;
+border: none;
+font-weight: 600;
+font-size: 20px;
+width: 140px;
+color: hsl(231, 11%, 63%);
+}
+
+@media(max-width:780px){
+.buttons,.nxt{
+height: 40px;
+}
+
+.back, .next{
+width: 120px;
+}
+}
+
+@media(max-width:992px){
+.buttons,.nxt{
+height: 45px;
+}
+
+.back, .next{
+width: 130px;
+}
+}
+
+@media(max-width:390px){
+.back, .next{
+font-size: 12px;
+width: 90px;
+}
+
+.buttons,.nxt{
+height: 34px;
+}
+}

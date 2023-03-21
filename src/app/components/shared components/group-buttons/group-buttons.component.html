@@ -1,0 +1,5 @@
+
+<div [ngClass]="end ? 'nxt' : 'buttons'">
+  <button type="button" *ngIf="!end" class="back" (click)="Back()">Go Back</button>
+  <button type="button" class="next" (click)="Next()">{{content}}</button>
+</div>

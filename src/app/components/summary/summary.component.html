@@ -1,0 +1,44 @@
+<div class="main">
+  <app-heading heading="Finishing up" paragraph="Double-check everything looks OK before confirming."></app-heading>
+  <div class="main-content" >
+      <div>
+        <ng-container *ngIf="show">
+          <div class="summary">
+                <div class="plan">
+                  <div class="name">
+                    <h5>{{selectedPlan.name}} ({{offer}})</h5>
+                    <a routerLink="/plan">change</a>
+                  </div>
+                    <ng-container [ngSwitch]="offer">
+                      <span *ngSwitchCase="'Monthly'">+${{selectedPlan.month}}/mo</span>
+                      <span *ngSwitchCase="'Yearly'">+${{selectedPlan.year}}/yr</span>
+                    </ng-container>
+                </div>
+
+              <ng-container >
+                <div class="ons" *ngFor="let item of selectedOns">
+                  <h6>{{item.name}}</h6>
+                  <ng-container [ngSwitch]="offer">
+                    <span *ngSwitchCase="'Monthly'">+${{item.month}}/mo</span>
+                    <span *ngSwitchCase="'Yearly'">+${{item.year}}/yr</span>
+                  </ng-container>
+                </div>
+            </ng-container>
+          </div>
+
+          <div class="total">
+            <ng-container [ngSwitch]="offer">
+              <h6 *ngSwitchCase="'Monthly'">Total (per month)</h6>
+              <h6 *ngSwitchCase="'Yearly'">Total (per year)</h6>
+            </ng-container>
+
+            <ng-container [ngSwitch]="offer">
+              <span *ngSwitchCase="'Monthly'">+${{total}}/mo</span>
+              <span *ngSwitchCase="'Yearly'">+${{total}}/yr</span>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+      <app-group-buttons [end]="false" back="/ons" next="/success" [navigate]="show" content="Confirm"></app-group-buttons>
+  </div>
+</div>

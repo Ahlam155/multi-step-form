@@ -1,0 +1,166 @@
+h5,h6{
+  margin: 0;
+}
+
+p{
+  margin-bottom: 0;
+  max-width: 300px;
+  color:hsl(231, 11%, 63%);
+}
+
+.main-content{
+  margin-top:10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary{
+  background-color: hsl(231, 100%, 99%);
+  padding: 20px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.summary .plan{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.summary .plan::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+
+.name a , .ons h6 ,.total h6{
+  color:hsl(231, 11%, 63%) ;
+}
+
+.name a{
+  font-size: 18px;
+}
+
+.name h5, .plan span{
+  color:hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+
+.plan span{
+  font-size: 20px;
+}
+
+h6{
+  margin:0;
+}
+
+.ons{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ons span{
+  color:hsl(213, 96%, 18%);
+}
+
+.total{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.total span{
+  color:hsl(213, 96%, 18%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+@media(max-width:780px){
+.name h5{
+  font-size: 16px;
+}
+
+.plan span{
+  font-size: 15px;
+}
+
+.name a , .ons h6{
+  font-size: 14px;
+}
+
+.total span{
+  font-size: 18px;
+}
+}
+
+@media(max-width:651px){
+.confirm{
+  width: 115px;
+  height: 37px;
+  font-size: 14px;
+}
+
+.summary{
+  padding-bottom: 22px;
+}
+}
+
+@media (max-width:465px) {
+.name h5{
+  font-size: 16px;
+}
+
+.plan span{
+  font-size: 15px;
+}
+
+.name a , .ons h6{
+  font-size: 15px;
+}
+
+.total span{
+  font-size: 17px;
+}
+}
+
+@media(max-width:390px){
+.main-content{
+  height: 350px;
+}
+.summary .plan{
+  padding-bottom: 20px;
+}
+
+.summary{
+  padding: 15px;
+}
+
+.name h5, .plan span, .total h6{
+  font-size: 12px;
+}
+
+.name a , .ons h6, .ons span{
+  font-size: 11px;
+}
+
+.total{
+  padding: 22px;
+}
+
+.total span{
+  font-size: 13px;
+}
+}
