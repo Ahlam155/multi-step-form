@@ -29,7 +29,7 @@ export class AddOnsComponent implements OnInit {
 
   ngOnInit(): void {
     this.browserRefresh = this.sharedService.browserRefresh;
-    if(this.browserRefresh){
+    if(!this.browserRefresh){
       this.router.navigateByUrl("/info")
     }
   }
