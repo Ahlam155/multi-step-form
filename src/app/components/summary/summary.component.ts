@@ -16,7 +16,7 @@ export class SummaryComponent implements OnInit {
   browserRefresh:boolean=false
   constructor(private sharedService:SharedService ,
               private router:Router) {
-    if(sharedService.selectedPlan && sharedService.selectedOns.length!=0)
+    if(sharedService.selectedPlan && sharedService.selectedOns.length!=0 && sharedService.validation)
     {
     this.selectedPlan=sharedService.selectedPlan;
     this.selectedOns=sharedService.selectedOns;
