@@ -12,10 +12,7 @@ export class SharedService {
   page:number=1;
   subscription: Subscription;
   browserRefresh:boolean=false;
-  validation1:boolean=false;
-  validation2:boolean=false;
-  validation3:boolean=false;
-  validation4:boolean=false;
+  validation:boolean=false;
 
   constructor(private router: Router) {
     this.subscription = router.events.subscribe((event) => {
