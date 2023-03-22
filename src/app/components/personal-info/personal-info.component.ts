@@ -40,7 +40,7 @@ export class PersonalInfoComponent implements OnInit {
     }
 
     this.router.navigateByUrl("/plan")
-    this.sharedService.validation1=true
+    this.sharedService.validation=true
   }
 
   }
