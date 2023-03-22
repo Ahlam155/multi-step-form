@@ -28,7 +28,7 @@ export class PlanComponent implements OnInit {
   ngOnInit(): void {
     this.sharedService.selectedPlan=this.allPlans[0];
     this.browserRefresh = this.sharedService.browserRefresh;
-    if(this.browserRefresh){
+    if(!this.browserRefresh){
       this.router.navigateByUrl("/info")
     }
   }
