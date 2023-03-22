@@ -27,7 +27,7 @@ export class SummaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.browserRefresh = this.sharedService.browserRefresh;
-    if(this.browserRefresh){
+    if(!this.browserRefresh){
       this.router.navigateByUrl("/info")
     }
     if(this.show){
